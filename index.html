@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+     </head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>CREATE ACCOUNT</h2>
+        </div>
+        <form class="form" id="form">
+            <div class="form-control">
+                <label>USER NAME</label>
+                <input type="Text" placeholder="ARAM" id="USER NAME">
+                <i class="fa-regular fa-check"></i>
+                <i class="fa-regular fa-exclamation"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>E-MAIL</label>
+                <input type="Text" placeholder="aram@gmail.com" id="E-MAIL">
+                <i class="fa-regular fa-check"></i>
+                <i class="fa-regular fa-exclamation"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>PASSWORD</label>
+                <input type="Text" placeholder="Password" id="PASSWORD">
+                <i class="fa-regular fa-check"></i>
+                <i class="fa-regular fa-exclamation"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label>CONFRIM PASSWORD</label>
+                <input type="Text" placeholder="Password confrim" id="CONFRIM PASSWORD">
+                <i class="fa-regular fa-check"></i>
+                <i class="fa-regular fa-exclamation"></i>
+                <small>Error message</small>
+                <button>SUBMIT</button>
+            </div>
+        </form>
+        <script>
+            const form = document.getElementById("form");
+            const form = USERNAME.getElementById("USERNAME");
+            const form = E - MAIL.getElementById("E-MAIL");
+            const form = PASSWORD.getElementById("PASSWORD");
+            const form = CONFRIM PASSWORD.getElementById("CONFRIM PASSWORD");
+            form.addEventListener('submit', e => {
+                e.preventDefault((;))
+            checkinput();
+
+    });
+            function checkinput() {
+                const USERNAME value = USERNAME.value.trim();
+                const E-MAIL value = E - MAIL.value.trim();
+                const PASSWORD value = PASSWORD.value.trim();
+                const CONFRIMPASSWORD value = CONFRIMPASSWORD.value.trim();
+                if (USERNAME === '') {
+                    Seterror(USERNAME, 'USERNAME cannot be blank');
+                }
+
+            }
+    else {
+                setsucess(USERNAME);
+
+            }
+            if (E - MAILvalue === '') {
+                Seterror(E - MAIL, 'E-MAIL cannot be blank');
+            }
+            elseif(!is E_MAIL(E - MAILvalue))
+            {
+                seterror(E - MAIL.'Not a valid E-MAIL');
+
+            }                
+
+    
+    else {
+                setsucess(E - MAIL);
+
+            }
+            if(PASSWORD===''){
+            Seterror(PASSWORD,'PASSWORD cannot be blank');
+                }
+
+    
+    else{
+
+    
+        setsucess(PASSWORD);
+    
+
+      } 
+      if(CONFRIMPASSWORD===''){
+            Seterror(CONFRIMPASSWORD,'CONFRIMPASSWORD cannot be blank');
+            elseif(PASSWORD!==CONFRIMPASSWORDVALUE){
+                seterror(CONFRIM PASSWORD DOES NOT MATCH)
+            }
+                }
+
+    
+    else{
+
+    
+        setsucess(PASSWORD);
+    
+
+      } 
+      function seterror(input,message){
+        const form-control=input.parentelement;
+        const small=formcontrol.queryselector('small');
+        formcontrol.classname='form-control error';
+        small.innertext=message;
+
+      }
+      function setsucess(input){
+        const formcontrol=input.parentelement;
+        formcontrol.classname='form-control success';
+
+      }
+      function is E-MAIL(E_MAIL){return/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.testE_MAIL}
+       </script>
+</body>
+
+</html>
